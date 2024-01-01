@@ -18,7 +18,8 @@ class HomePage extends StatelessWidget {
         backgroundColor: primary,
         title: Text(
           "اذكار المسلم ",
-          style: GoogleFonts.cairo(fontSize: 20, fontWeight: FontWeight.w700),
+          style: GoogleFonts.cairo(
+              fontSize: 25, fontWeight: FontWeight.w700, color: Colors.white),
         ),
         centerTitle: true,
       ),
@@ -44,37 +45,62 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 25,
               ),
-              AzkarCard(
-                image: "assets/svgs/night.svg",
-                text: "اذكار المساء",
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/night');
+                },
+                child: AzkarCard(
+                  image: "assets/svgs/night.svg",
+                  text: "اذكار المساء",
+                ),
               ),
               SizedBox(
                 height: 25,
               ),
-              AzkarCard(
-                image: "assets/svgs/mosque.svg",
-                text: "اذكار المسجد",
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/mosque');
+                },
+                child: AzkarCard(
+                  image: "assets/svgs/mosque.svg",
+                  text: "اذكار المسجد",
+                ),
               ),
               SizedBox(
                 height: 25,
               ),
-              AzkarCard(
-                image: "assets/svgs/wake up.svg",
-                text: "اذكار الاستيقاظ",
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/get_up');
+                },
+                child: AzkarCard(
+                  image: "assets/svgs/wake up.svg",
+                  text: "اذكار الاستيقاظ",
+                ),
               ),
               SizedBox(
                 height: 25,
               ),
-              AzkarCard(
-                image: "assets/svgs/sleeping.svg",
-                text: "اذكار النوم",
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/sleeping');
+                },
+                child: AzkarCard(
+                  image: "assets/svgs/sleeping.svg",
+                  text: "اذكار النوم",
+                ),
               ),
               SizedBox(
                 height: 25,
               ),
-              AzkarCard(
-                image: "assets/svgs/pray.svg",
-                text: "اذكار الصلاة",
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/praying');
+                },
+                child: AzkarCard(
+                  image: "assets/svgs/pray.svg",
+                  text: "اذكار الصلاة",
+                ),
               ),
             ],
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:share_plus/share_plus.dart';
 import '../colors.dart';
 
 //Todo :
@@ -43,11 +43,6 @@ class _CounterScreenState extends State<CounterScreen> {
             width: double.infinity,
             decoration: BoxDecoration(
               color: widget.flag == 1 ? card : Color.fromARGB(255, 25, 26, 26),
-              // color: (flag==1)? card:Colors.amber,
-              // color: (data.getFlag() == 1) ? card : Color(0xff1d201f),
-              // color: card,//i think i am gonna using provider here to access the flag
-              //watch provider from ali hassan
-              //Color(0xff1d201f),
               borderRadius: BorderRadius.circular(16),
               border: Border.all(
                 width: 1,
@@ -58,7 +53,7 @@ class _CounterScreenState extends State<CounterScreen> {
               children: [
                 Text(
                   widget.text,
-                  style: GoogleFonts.notoNaskhArabic(
+                  style: GoogleFonts.cairo(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
                     letterSpacing: 0.1,
@@ -83,7 +78,8 @@ class _CounterScreenState extends State<CounterScreen> {
                     children: [
                       ElevatedButton(
                         onPressed: () {
-                          //Share.share("com.example.flutter_application_1");
+                          //share button
+                          Share.share(widget.text);
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: (widget.flag == 1)
@@ -132,7 +128,11 @@ class _CounterScreenState extends State<CounterScreen> {
                                   onPressed: () {
                                     _decrementCounter();
                                   },
-                                  child: Text("${widget.counter}"),
+                                  child: Text(
+                                    "${widget.counter}",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 21),
+                                  ),
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor:
                                         Color.fromARGB(0, 239, 97, 97),

@@ -1,0 +1,13 @@
+[1mdiff --git a/lib/screens/mosque.dart b/lib/screens/mosque.dart[m
+[1mindex 4110442..96d8f76 100644[m
+[1m--- a/lib/screens/mosque.dart[m
+[1m+++ b/lib/screens/mosque.dart[m
+[36m@@ -62,7 +62,7 @@[m [mclass _MosqueState extends State<Mosque> {[m
+                     fontSize: 22,[m
+                     fontWeight: FontWeight.bold,[m
+                     color: Color.fromARGB(255, 230, 228, 242),[m
+[31m-                  ),[m
+[32m+[m[32m                  ),[m[41m [m
+                 ),[m
+               ),[m
+             ],[m

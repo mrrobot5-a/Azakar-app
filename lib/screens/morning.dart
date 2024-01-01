@@ -81,16 +81,20 @@ class _MorningAzkarState extends State<MorningAzkar> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                margin: EdgeInsets.only(top: 31),
-                width: 100,
-                height: 90,
-                child: Opacity(
-                  opacity: 1,
-                  child: Image.asset(
-                    "assets/images/day.png",
+              Stack(
+                alignment: Alignment.topCenter,
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 18),
+                    width: 100,
+                    child: Opacity(
+                      opacity: 1,
+                      child: Image.asset(
+                        "assets/images/dawn.png",
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
               Container(
                 margin: EdgeInsets.only(top: 41),
