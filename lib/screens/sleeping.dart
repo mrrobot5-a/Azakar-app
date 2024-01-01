@@ -32,7 +32,7 @@ class _SleepingState extends State<Sleeping> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          leadingWidth: 26,
+          leadingWidth: 25,
           leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
